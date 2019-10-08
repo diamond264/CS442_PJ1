@@ -7,16 +7,17 @@
     android:background="@drawable/gradient"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView_442"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/refreshButton"-->
+<!--        android:layout_width="20dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginRight="16dp"-->
+<!--        android:background="@null"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:src="@drawable/refresh"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <TextView
         android:id="@+id/city_text"
@@ -27,7 +28,7 @@
         android:fontFamily="monospace"
         android:text="Daejeon"
         android:textColor="#ffffff"
-        android:textSize="48sp"
+        android:textSize="36sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,7 +54,7 @@
         android:textColor="#ffffff"
         android:textSize="42sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/city_text" />
+        app:layout_constraintTop_toBottomOf="@id/city_text" />
 
     <TextView
         android:id="@+id/temperature_text2"
@@ -64,8 +65,8 @@
         android:text="°C"
         android:textColor="#ffffff"
         android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="@+id/temperature_text"
-        app:layout_constraintLeft_toRightOf="@+id/temperature_text" />
+        app:layout_constraintBottom_toBottomOf="@id/temperature_text"
+        app:layout_constraintLeft_toRightOf="@id/temperature_text" />
 
     <TextView
         android:id="@+id/condition_text"
@@ -76,8 +77,8 @@
         android:text="Rain"
         android:textColor="#ffffff"
         android:textSize="38sp"
-        app:layout_constraintBottom_toBottomOf="@+id/temperature_text"
-        app:layout_constraintLeft_toRightOf="@+id/temperature_text2" />
+        app:layout_constraintBottom_toBottomOf="@id/temperature_text"
+        app:layout_constraintLeft_toRightOf="@id/temperature_text2" />
 
     <TextView
         android:id="@+id/maxtemperature_text"
@@ -87,8 +88,8 @@
         android:text="8"
         android:textColor="#ffffff"
         android:textSize="34sp"
-        app:layout_constraintLeft_toLeftOf="@+id/temperature_text"
-        app:layout_constraintTop_toBottomOf="@+id/temperature_text" />
+        app:layout_constraintLeft_toLeftOf="@id/temperature_text"
+        app:layout_constraintTop_toBottomOf="@id/temperature_text" />
 
     <TextView
         android:id="@+id/maxtemperature_text2"
@@ -99,8 +100,8 @@
         android:text="°C"
         android:textColor="#ffffff"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/maxtemperature_text"
-        app:layout_constraintLeft_toRightOf="@+id/maxtemperature_text" />
+        app:layout_constraintBottom_toBottomOf="@id/maxtemperature_text"
+        app:layout_constraintLeft_toRightOf="@id/maxtemperature_text" />
 
     <TextView
         android:id="@+id/maxtemperature_text3"
@@ -112,8 +113,8 @@
         android:text="/"
         android:textColor="#ffffff"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/maxtemperature_text"
-        app:layout_constraintLeft_toRightOf="@+id/maxtemperature_text2" />
+        app:layout_constraintBottom_toBottomOf="@id/maxtemperature_text"
+        app:layout_constraintLeft_toRightOf="@id/maxtemperature_text2" />
 
     <TextView
         android:id="@+id/mintemperature_text"
@@ -124,8 +125,8 @@
         android:text="8"
         android:textColor="#ffffff"
         android:textSize="34sp"
-        app:layout_constraintLeft_toRightOf="@+id/maxtemperature_text3"
-        app:layout_constraintTop_toBottomOf="@+id/temperature_text" />
+        app:layout_constraintLeft_toRightOf="@id/maxtemperature_text3"
+        app:layout_constraintTop_toBottomOf="@id/temperature_text" />
 
     <TextView
         android:id="@+id/mintemperature_text2"
@@ -136,8 +137,8 @@
         android:text="°C"
         android:textColor="#ffffff"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/mintemperature_text"
-        app:layout_constraintLeft_toRightOf="@+id/mintemperature_text" />
+        app:layout_constraintBottom_toBottomOf="@id/mintemperature_text"
+        app:layout_constraintLeft_toRightOf="@id/mintemperature_text" />
 
     <TextView
         android:id="@+id/humidity_text"
@@ -147,47 +148,451 @@
         android:text="100% humidity"
         android:textColor="#ffffff"
         android:textSize="18sp"
-        app:layout_constraintLeft_toLeftOf="@+id/maxtemperature_text"
-        app:layout_constraintTop_toBottomOf="@+id/maxtemperature_text" />
+        app:layout_constraintLeft_toLeftOf="@id/maxtemperature_text"
+        app:layout_constraintTop_toBottomOf="@id/maxtemperature_text" />
+
+    <ImageView
+        android:id="@+id/weatherImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="24dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/rain"
+        app:layout_constraintBottom_toTopOf="@id/dividerLine2"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <View
         android:id="@+id/dividerLine2"
         android:layout_width="360dp"
         android:layout_height="4dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="12dp"
         android:background="#6f8caa"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/humidity_text" />
 
-    <Button
-        android:id="@+id/button_442"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginLeft="161dp"
-        android:layout_marginTop="290dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginRight="162dp"
-        android:layout_marginBottom="18dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/textView_442"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageButton
-        android:id="@+id/refreshButton"
+    <TextView
+        android:id="@+id/next1Day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:background="@null"
-        android:src="@drawable/refresh"
+        android:layout_marginRight="32dp"
+        android:fontFamily="monospace"
+        android:text="Monday"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintRight_toLeftOf="@id/next2Day"
+        app:layout_constraintTop_toBottomOf="@id/dividerLine2" />
+
+    <ImageView
+        android:id="@+id/next1DayImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/rain"
+        app:layout_constraintLeft_toLeftOf="@id/next1Day"
+        app:layout_constraintRight_toRightOf="@id/next1Day"
+        app:layout_constraintTop_toBottomOf="@id/next1Day" />
+
+    <TextView
+        android:id="@+id/next1DayMinMaxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="16.2°C/\n12.3°C"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/next1Day"
+        app:layout_constraintRight_toRightOf="@id/next1Day"
+        app:layout_constraintTop_toBottomOf="@id/next1DayImage" />
+
+    <TextView
+        android:id="@+id/next1DayHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="100%"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/next1Day"
+        app:layout_constraintRight_toRightOf="@id/next1Day"
+        app:layout_constraintTop_toBottomOf="@id/next1DayMinMaxTemp" />
+
+    <TextView
+        android:id="@+id/next2Day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:text="Thursday"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="@id/dividerLine2"
+        app:layout_constraintRight_toRightOf="@id/dividerLine2"
+        app:layout_constraintTop_toBottomOf="@id/dividerLine2" />
+
+    <ImageView
+        android:id="@+id/next2DayImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/rain"
+        app:layout_constraintLeft_toLeftOf="@id/next2Day"
+        app:layout_constraintRight_toRightOf="@id/next2Day"
+        app:layout_constraintTop_toBottomOf="@id/next2Day" />
+
+    <TextView
+        android:id="@+id/next2DayMinMaxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="16.2°C/\n12.3°C"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/next2Day"
+        app:layout_constraintRight_toRightOf="@id/next2Day"
+        app:layout_constraintTop_toBottomOf="@id/next2DayImage" />
+
+    <TextView
+        android:id="@+id/next2DayHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="100%"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/next2Day"
+        app:layout_constraintRight_toRightOf="@id/next2Day"
+        app:layout_constraintTop_toBottomOf="@id/next2DayMinMaxTemp" />
+
+    <TextView
+        android:id="@+id/next3Day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:text="Thursday"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/next2Day"
+        app:layout_constraintTop_toBottomOf="@id/dividerLine2" />
+
+    <ImageView
+        android:id="@+id/next3DayImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/rain"
+        app:layout_constraintLeft_toLeftOf="@id/next3Day"
+        app:layout_constraintRight_toRightOf="@id/next3Day"
+        app:layout_constraintTop_toBottomOf="@id/next3Day" />
+
+    <TextView
+        android:id="@+id/next3DayMinMaxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="16.2°C/\n12.3°C"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/next3Day"
+        app:layout_constraintRight_toRightOf="@id/next3Day"
+        app:layout_constraintTop_toBottomOf="@id/next3DayImage" />
+
+    <TextView
+        android:id="@+id/next3DayHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="100%"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/next3Day"
+        app:layout_constraintRight_toRightOf="@id/next3Day"
+        app:layout_constraintTop_toBottomOf="@id/next3DayMinMaxTemp" />
+
+    <View
+        android:id="@+id/dividerLine3"
+        android:layout_width="360dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="24dp"
+        android:background="#6f8caa"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/next3DayHumidity" />
+
+    <TextView
+        android:id="@+id/HourForecast_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:text="3-Hourly Forecast"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dividerLine3" />
+
+    <TextView
+        android:id="@+id/next1Hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="48dp"
+        android:fontFamily="monospace"
+        android:text="00"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintRight_toLeftOf="@id/next2Hour"
+        app:layout_constraintTop_toBottomOf="@id/HourForecast_text" />
+
+    <ImageView
+        android:id="@+id/next1HourImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/rain"
+        app:layout_constraintLeft_toLeftOf="@id/next1Hour"
+        app:layout_constraintRight_toRightOf="@id/next1Hour"
+        app:layout_constraintTop_toBottomOf="@id/next1Hour" />
+
+    <TextView
+        android:id="@+id/next1HourMinMaxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="16.2°C"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/next1Hour"
+        app:layout_constraintRight_toRightOf="@id/next1Hour"
+        app:layout_constraintTop_toBottomOf="@id/next1HourImage" />
+
+    <TextView
+        android:id="@+id/next1HourHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="100%"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/next1Hour"
+        app:layout_constraintRight_toRightOf="@id/next1Hour"
+        app:layout_constraintTop_toBottomOf="@id/next1HourMinMaxTemp" />
+
+    <TextView
+        android:id="@+id/next2Hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="48dp"
+        android:fontFamily="monospace"
+        android:text="03"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintRight_toLeftOf="@id/next3Hour"
+        app:layout_constraintTop_toBottomOf="@id/HourForecast_text" />
+
+    <ImageView
+        android:id="@+id/next2HourImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/rain"
+        app:layout_constraintLeft_toLeftOf="@id/next2Hour"
+        app:layout_constraintRight_toRightOf="@id/next2Hour"
+        app:layout_constraintTop_toBottomOf="@id/next2Hour" />
+
+    <TextView
+        android:id="@+id/next2HourMinMaxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="16.2°C"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/next2Hour"
+        app:layout_constraintRight_toRightOf="@id/next2Hour"
+        app:layout_constraintTop_toBottomOf="@id/next2HourImage" />
+
+    <TextView
+        android:id="@+id/next2HourHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="100%"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/next2Hour"
+        app:layout_constraintRight_toRightOf="@id/next2Hour"
+        app:layout_constraintTop_toBottomOf="@id/next2HourMinMaxTemp" />
+
+    <TextView
+        android:id="@+id/next3Hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:text="06"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="@id/HourForecast_text"
+        app:layout_constraintRight_toRightOf="@id/HourForecast_text"
+        app:layout_constraintTop_toBottomOf="@id/HourForecast_text" />
+
+    <ImageView
+        android:id="@+id/next3HourImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/rain"
+        app:layout_constraintLeft_toLeftOf="@id/next3Hour"
+        app:layout_constraintRight_toRightOf="@id/next3Hour"
+        app:layout_constraintTop_toBottomOf="@id/next3Hour" />
+
+    <TextView
+        android:id="@+id/next3HourMinMaxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="16.2°C"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/next3Hour"
+        app:layout_constraintRight_toRightOf="@id/next3Hour"
+        app:layout_constraintTop_toBottomOf="@id/next3HourImage" />
+
+    <TextView
+        android:id="@+id/next3HourHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="100%"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/next3Hour"
+        app:layout_constraintRight_toRightOf="@id/next3Hour"
+        app:layout_constraintTop_toBottomOf="@id/next3HourMinMaxTemp" />
+
+    <TextView
+        android:id="@+id/next4Hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:text="09"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/next3Hour"
+        app:layout_constraintTop_toBottomOf="@id/HourForecast_text" />
+
+    <ImageView
+        android:id="@+id/next4HourImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/rain"
+        app:layout_constraintLeft_toLeftOf="@id/next4Hour"
+        app:layout_constraintRight_toRightOf="@id/next4Hour"
+        app:layout_constraintTop_toBottomOf="@id/next4Hour" />
+
+    <TextView
+        android:id="@+id/next4HourMinMaxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="16.2°C"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/next4Hour"
+        app:layout_constraintRight_toRightOf="@id/next4Hour"
+        app:layout_constraintTop_toBottomOf="@id/next4HourImage" />
+
+    <TextView
+        android:id="@+id/next4HourHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="100%"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/next4Hour"
+        app:layout_constraintRight_toRightOf="@id/next4Hour"
+        app:layout_constraintTop_toBottomOf="@id/next4HourMinMaxTemp" />
+
+    <TextView
+        android:id="@+id/next5Hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:text="12"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/next4Hour"
+        app:layout_constraintTop_toBottomOf="@id/HourForecast_text" />
+
+    <ImageView
+        android:id="@+id/next5HourImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/rain"
+        app:layout_constraintLeft_toLeftOf="@id/next5Hour"
+        app:layout_constraintRight_toRightOf="@id/next5Hour"
+        app:layout_constraintTop_toBottomOf="@id/next5Hour" />
+
+    <TextView
+        android:id="@+id/next5HourMinMaxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="16.2°C"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/next5Hour"
+        app:layout_constraintRight_toRightOf="@id/next5Hour"
+        app:layout_constraintTop_toBottomOf="@id/next5HourImage" />
+
+    <TextView
+        android:id="@+id/next5HourHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="100%"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/next5Hour"
+        app:layout_constraintRight_toRightOf="@id/next5Hour"
+        app:layout_constraintTop_toBottomOf="@id/next5HourMinMaxTemp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
